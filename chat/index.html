@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="chatApp">
+  <head>
+    <meta charset="utf-8">
+    <title>chatApp</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-controller="mainCtrl">
+      {{test}}
+    <form ng-submit="postChat(newChat)">
+      <input type="text" ng-model="newChat.body"/>
+    </form>
+    <div ng-repeat="chat in chatStore">
+      {{chat.body}}
+    </div>
+    <div>
+      <button ng-click="clearAll" type="button">Clear Chats</button>
+    <div>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+      <script src="app.js" type="text/javascript"></script>
+      <script src="mainCtrl.js" type="text/javascript"></script>
+      <script src="mainServ.js" type="text/javascript"></script>
+  </body>
+</html>
